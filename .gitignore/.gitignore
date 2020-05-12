@@ -1,6 +1,11 @@
-.tlog
-.pdb
-.obj
-.idb
-.ilk
-.log
+*.tlog
+*.pdb
+*.obj
+*.idb
+*.ilk
+*.log
+*.ipch
+<<<<<<< HEAD
+
+=======
+>>>>>>> 936d35a87af60809049d41ad8f601b5bba7405fd
