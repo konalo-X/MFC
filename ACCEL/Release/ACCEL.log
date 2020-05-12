@@ -1,0 +1,8 @@
+﻿  accel.cpp
+  _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+  正在生成代码
+  3 of 170 functions ( 1.8%) were compiled, the rest were copied from previous compilation.
+    1 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  ACCEL.vcxproj -> D:\source\MFC\ACCEL\Release\ACCEL.exe

@@ -1,0 +1,2 @@
+D:\source\MFC\ACCEL\Debug\ACCEL.exe
+D:\source\MFC\ACCEL\Debug\ACCEL.pdb
