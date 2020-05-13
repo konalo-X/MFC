@@ -10,7 +10,7 @@
 
 ![图示](https://raw.githubusercontent.com/konalo-X/pic/master/20200513220434.gif)
 
-```c++
+```cpp
 
 //目的是随着鼠标的移动画虚线,但是画过的线一直存在所以一片漆黑
 void CMainWindow::InvertLine(CDC* pDC, CPoint ptFrom, CPoint ptTo)
@@ -42,7 +42,7 @@ void CMainWindow::OnMouseMove(UINT nFlags, CPoint point)
 ```
 利用SetROP2函数可以有效擦除已画的线
 
-```C++
+```cpp
 //原型:
 //Sets the current drawing mode. 
 int SetROP2(
@@ -58,7 +58,7 @@ int SetROP2(
 
 代码:
 利用颜色反转来划线,之前的旧线
-```c++
+```cpp
 void CMainWindow::InvertLine(CDC* pDC, CPoint ptFrom, CPoint ptTo)
 {
     int nOldMode = pDC->SetROP2(R2_NOT);
@@ -123,7 +123,7 @@ void CMainWindow::OnLButtonUp(UINT nFlags,CPoint point)
 
 #### 3.NCMessage的处理-要传递给父类默认处理函数处理
 
-```c++
+```cpp
 /*
        m_bCaptureEnabled = m_bCaptureEnabled ? FALSE : TRUE;用于频繁改变FALSE/TRUE的写法
 */
