@@ -1,7 +1,9 @@
 *.tlog
-*.pdb
-*.obj
-*.idb
-*.ilk
+*.user
 *.log
+*.tlog
+*.txt
 *.ipch
+*.db
+*.aps
+*.obj
