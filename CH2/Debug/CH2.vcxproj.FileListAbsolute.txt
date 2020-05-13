@@ -1,0 +1,2 @@
+D:\source\MFC\CH2\Debug\CH2.exe
+D:\source\MFC\CH2\Debug\CH2.pdb
