@@ -1,0 +1,2 @@
+D:\source\MFC\TicTac\Debug\TicTac.exe
+D:\source\MFC\TicTac\Debug\TicTac.pdb

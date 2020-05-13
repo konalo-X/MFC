@@ -1,0 +1,2 @@
+D:\source\MFC\MouseCap\Debug\MouseCap.exe
+D:\source\MFC\MouseCap\Debug\MouseCap.pdb

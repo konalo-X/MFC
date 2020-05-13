@@ -1,0 +1,3 @@
+﻿  MouseCap.cpp
+  _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+  MouseCap.vcxproj -> D:\source\MFC\MouseCap\Debug\MouseCap.exe

@@ -1,0 +1,2 @@
+D:\source\MFC\ODBC\Debug\ODBC.exe
+D:\source\MFC\ODBC\Debug\ODBC.pdb

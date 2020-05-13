@@ -1,0 +1,2 @@
+D:\source\MFC\HelloMFC\Debug\HelloMFC.exe
+D:\source\MFC\HelloMFC\Debug\HelloMFC.pdb

@@ -1,0 +1,2 @@
+D:\source\MFC\MFCHello\Debug\MFCHello.exe
+D:\source\MFC\MFCHello\Debug\MFCHello.pdb

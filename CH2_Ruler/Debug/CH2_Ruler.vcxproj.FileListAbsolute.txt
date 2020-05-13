@@ -1,0 +1,2 @@
+D:\source\MFC\CH2_Ruler\Debug\CH2_Ruler.exe
+D:\source\MFC\CH2_Ruler\Debug\CH2_Ruler.pdb
