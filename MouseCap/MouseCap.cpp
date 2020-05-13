@@ -11,39 +11,20 @@ BOOL CMyApp::InitInstance()
 }
 
 //反转线条
+
 void CMainWindow::InvertLine(CDC* pDC, CPoint ptFrom, CPoint ptTo)
 {
     int nOldMode = pDC->SetROP2(R2_NOT);
-    CPen pen(PS_DASH, 0, RGB(0, 0, 0));
+    CPen pen(PS_DASH, 1, RGB(255, 0, 0));
     HGDIOBJ oldPen =pDC->SelectObject(pen);
     pDC->MoveTo(ptFrom);
     pDC->LineTo(ptTo);
     pDC->SelectObject(oldPen);
     pDC->SetROP2(nOldMode);
 }
-/*
-CMainWindow::CMainWindow()
-{
-	m_bTracking = FALSE;
-	m_bCaptureEnabled = TRUE;
 
-	//
-	// Register a WNDCLASS.
-	//
-	CString strWndClass = AfxRegisterWndClass(
-		0,
-		AfxGetApp()->LoadStandardCursor(IDC_CROSS),
-		(HBRUSH)(COLOR_WINDOW + 1),
-		AfxGetApp()->LoadStandardIcon(IDI_WINLOGO)
-	);
 
-	//
-	// Create a window.
-	//
-	Create(strWndClass, _T("Mouse Capture Demo (Capture Enabled)"));
-}
 
-*/
 CMainWindow::CMainWindow()
 {
 	m_bTracking = FALSE;
@@ -53,12 +34,14 @@ CMainWindow::CMainWindow()
 		AfxGetApp()->LoadStandardCursor(IDC_CROSS),
 		(HBRUSH)GetStockObject(WHITE_BRUSH), 
 		AfxGetApp()->LoadStandardIcon(IDI_WINLOGO));
-    Create(wndclass,_T("MouseCap"));
+    Create(wndclass,_T("Mouse Capture Demo(capture Enabled)"));
 }
 
 void CMainWindow::OnLButtonDown(UINT nFlags,CPoint point)
 {
-    SetCapture();
+    if(m_bCaptureEnabled)
+        SetCapture();
+
     m_bTracking = TRUE;
     m_ptFrom = point;
     m_ptTo = point;
@@ -68,9 +51,25 @@ void CMainWindow::OnLButtonDown(UINT nFlags,CPoint point)
 
 void CMainWindow::OnLButtonUp(UINT nFlags,CPoint point)
 {
-    m_ptTo = point;
-    m_bTracking = FALSE;
-    ReleaseCapture();
+    
+
+  
+    if (m_bTracking)
+    {
+        m_bTracking = FALSE;
+        if(GetCapture()==this)
+            ::ReleaseCapture();
+    }
+	CClientDC dc(this);
+
+	InvertLine(&dc, m_ptFrom, point);
+
+	CPen RedPen(PS_SOLID, 16, RGB(255, 0, 0));
+	HGDIOBJ OldPen = dc.SelectObject(RedPen);
+
+	dc.MoveTo(m_ptFrom);
+	dc.LineTo(point);
+    dc.SelectObject(OldPen);
 }
 
 void CMainWindow::OnMouseMove(UINT nFlags, CPoint point)
@@ -80,12 +79,23 @@ void CMainWindow::OnMouseMove(UINT nFlags, CPoint point)
     if (m_bTracking)
     {
         dc.SetBkMode(TRANSPARENT);
+        
         InvertLine(&dc, m_ptFrom, m_ptTo);
-     
         InvertLine(&dc, m_ptFrom, point);
+        m_ptTo = point;
         
     }
-    m_ptTo = point;
+}
+
+void CMainWindow::OnNcLButtonDown(UINT nHitTest, CPoint point)
+{
+    if (nHitTest == HTCAPTION)
+    {
+       m_bCaptureEnabled = m_bCaptureEnabled ? FALSE : TRUE;
+       SetWindowText( m_bCaptureEnabled ? _T("Mouse Capture Demo(capture Enabled)"):_T("Mouse Capture Demo(capture Disabled)"));
+    }
+    CFrameWnd::OnNcLButtonDown(nHitTest, point);
+    
 }
 
 ///Message Map

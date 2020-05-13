@@ -1,8 +1,8 @@
 ﻿  MouseCap.cpp
   _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
   正在生成代码
-  6 of 161 functions ( 3.7%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    2 functions had inline decision re-evaluated but remain unchanged
+  4 of 163 functions ( 2.5%) were compiled, the rest were copied from previous compilation.
+    1 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   已完成代码的生成
   MouseCap.vcxproj -> D:\source\MFC\MouseCap\Release\MouseCap.exe
