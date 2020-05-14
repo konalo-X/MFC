@@ -1,0 +1,27 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Ruler - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\wy\AppData\Local\Temp\RSP9109.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_AFXDLL" /Fp"Debug/Ruler.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\study\计算机\MFC Windows程序设计(第二版)(中文版)\Code\Chap02\Ruler\Ruler.cpp"
+]
+Creating command line "cl.exe @C:\Users\wy\AppData\Local\Temp\RSP9109.tmp" 
+Creating command line "link.exe /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Ruler.pdb" /debug /machine:I386 /out:"Debug/Ruler.exe" /pdbtype:sept  ".\Debug\Ruler.obj" "
+<h3>Output Window</h3>
+Compiling...
+Ruler.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+Ruler.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
